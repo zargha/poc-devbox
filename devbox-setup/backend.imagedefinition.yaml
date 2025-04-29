@@ -6,12 +6,12 @@ description: "base environment"
 tasks:
   - name: ~/winget
     parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/contoso-co/common-eng-sys/msft-git/dsc-configurations/common-config.dsc.yaml'
+      downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/common-config.dsc.yaml?token=GHSAT0AAAAAAC6QCHZKCGNKRG5LCNG3EGBW2AQTYDQ'
   ### Run the DSC configuration for the backend engineering environment
   - name: ~/winget
     parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/contoso-co/eShop/refs/heads/main/.configurations/backend-eng.dsc.yaml'
-userTasks:
-  - name: ~/winget
-    parameters:
-      configurationFile: 'z:\workspaces\eshop\.configurations\backend-eng.postcreate.dsc.yaml'
+      downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/backend-eng.dsc.yaml?token=GHSAT0AAAAAAC6QCHZLHA5NSJV6MJ6IWSK62AQTYNA'
+# userTasks:
+#   - name: ~/winget
+#     parameters:
+#       configurationFile: 'z:\workspaces\cog\.configurations\backend-eng.postcreate.dsc.yaml'
