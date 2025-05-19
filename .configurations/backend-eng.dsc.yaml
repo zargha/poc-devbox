@@ -59,7 +59,13 @@ properties:
        securityContext: elevated
       settings:
         id: CoreyButler.NVMforWindows
-        ### Install dot NET SDK
+    ### Install dot NET SDK
     ### -------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Microsoft .NET SDK 6.0
+      id: DotNetSDK
+      directives:
+        description: Install Microsoft .NET SDK 6.0
+        allowPrerelease: true
+        securityContext: elevated
+      settings:
+        id: Microsoft.DotNet.SDK.6
