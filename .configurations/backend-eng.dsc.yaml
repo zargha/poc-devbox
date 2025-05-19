@@ -6,15 +6,15 @@ properties:
   ########################################
   resources:
     # Clone the Git repository
-    - resource: PSDscResources/Script
-      directives:
-        description: Configure Git to use Default WAM account
-      settings:
-        SetScript: |
-          git clone --quiet https://github.com/zargha/poc-devbox "Z:\workspaces\devbox"
+    # - resource: PSDscResources/Script
+    #   directives:
+    #     description: Configure Git to use Default WAM account
+    #   settings:
+    #     SetScript: |
+    #       git clone --quiet https://github.com/zargha/poc-devbox "C:\"
           
-        GetScript: return $false
-        TestScript: return $false
+    #     GetScript: return $false
+    #     TestScript: return $false
     ########################################
     ### Install CLIs, SDKs & Tools
     ########################################
@@ -63,4 +63,3 @@ properties:
     ### -------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Microsoft .NET SDK 6.0
-      version: 6.0.201

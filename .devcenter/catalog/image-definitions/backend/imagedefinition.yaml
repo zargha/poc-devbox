@@ -5,9 +5,9 @@ description: "This definition is for the eShop backend engineering environment"
 
 tasks:
   ### 
-  - name: winget
-    parameters:
-      downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/common-config.dsc.yaml'
+  # - name: winget
+  #   parameters:
+  #     downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/common-config.dsc.yaml'
   ### Run the DSC configuration for the backend engineering environment
   - name: winget
     parameters:
