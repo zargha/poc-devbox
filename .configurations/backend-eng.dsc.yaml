@@ -11,7 +11,7 @@ properties:
         description: Configure Git to use Default WAM account
       settings:
         SetScript: |
-          git clone --quiet https://github.com/zargha/poc-devbox.git "Z:\workspaces\cog"
+          git clone --quiet https://github.com/contoso-co/eshop.git "Z:\workspaces\eshop"
           
         GetScript: return $false
         TestScript: return $false
@@ -27,26 +27,25 @@ properties:
         allowPrerelease: true
       settings:
        id: Docker.DockerDesktop
-       
     ### Install Visual Sudio
     ### -------------------------------------
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   id: vscommunity
-    #   directives:
-    #    description: Install Visual Studio 2022 Community
-    #    allowPrerelease: true
-    #   settings:
-    #     id: Microsoft.VisualStudio.2022.Community.Preview
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vscommunity
+      directives:
+       description: Install Visual Studio 2022 Community
+       allowPrerelease: true
+      settings:
+        id: Microsoft.VisualStudio.2022.Community.Preview
     ### Install VS Workloads
     ### -------------------------------------
-    # - resource: Microsoft.VisualStudio.DSC/VSComponents
-    #   directives:
-    #     description: Install required VS workloads from vsconfig file
-    #     allowPrerelease: true
-    #   dependsOn:
-    #     - vscommunity
-    #   settings:
-    #     productId: Microsoft.VisualStudio.Product.Community
-    #     channelId: VisualStudio.17.Preview
-    #     components: [Microsoft.VisualStudio.Workload.NetWeb, Microsoft.VisualStudio.Workload.NetCrossPlat, aspire]
-    #     includeRecommended: true
+    - resource: Microsoft.VisualStudio.DSC/VSComponents
+      directives:
+        description: Install required VS workloads from vsconfig file
+        allowPrerelease: true
+      dependsOn:
+        - vscommunity
+      settings:
+        productId: Microsoft.VisualStudio.Product.Community
+        channelId: VisualStudio.17.Preview
+        components: [Microsoft.VisualStudio.Workload.NetWeb, Microsoft.VisualStudio.Workload.NetCrossPlat, aspire]
+        includeRecommended: true

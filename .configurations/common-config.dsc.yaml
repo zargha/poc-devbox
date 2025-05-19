@@ -16,7 +16,7 @@ properties:
         DiskId: '0'
         DiskIdType: 'Number'
         DriveLetter: 'Z'
-        FSLabel: 'Dev Drive 1'
+        FSLabel: 'Dev Drive'
         DevDrive: true
         AllowDestructive: true
         FSFormat: 'ReFS'
