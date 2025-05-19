@@ -11,7 +11,7 @@ properties:
         description: Configure Git to use Default WAM account
       settings:
         SetScript: |
-          git clone --quiet https://github.com/contoso-co/eshop.git "Z:\workspaces\eshop"
+          git clone --quiet https://github.com/zargha/poc-devbox "Z:\workspaces\devbox"
           
         GetScript: return $false
         TestScript: return $false
@@ -25,27 +25,42 @@ properties:
       directives:
         description: Install Docker Desktop
         allowPrerelease: true
+        securityContext: elevated
       settings:
        id: Docker.DockerDesktop
-    ### Install Visual Sudio
+    ### Install Rancher Desktop
     ### -------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: vscommunity
+      id: Rancher
       directives:
-       description: Install Visual Studio 2022 Community
+       description: Install Rancher Desktop
        allowPrerelease: true
+       securityContext: elevated
       settings:
-        id: Microsoft.VisualStudio.2022.Community.Preview
-    ### Install VS Workloads
+        id: SUSE.RancherDesktop
+    ### Install SQL Server Management Studio
     ### -------------------------------------
-    - resource: Microsoft.VisualStudio.DSC/VSComponents
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Microsoft SQL Server Management Studio
       directives:
-        description: Install required VS workloads from vsconfig file
-        allowPrerelease: true
-      dependsOn:
-        - vscommunity
+       description: Install Microsoft SQL Server Management Studio
+       allowPrerelease: true
+       securityContext: elevated
       settings:
-        productId: Microsoft.VisualStudio.Product.Community
-        channelId: VisualStudio.17.Preview
-        components: [Microsoft.VisualStudio.Workload.NetWeb, Microsoft.VisualStudio.Workload.NetCrossPlat, aspire]
-        includeRecommended: true
+        id: Microsoft.SQLServerManagementStudio
+        version: 20.2.1
+    ### Install NVM dfor Windows
+    ### -------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: NVM for Windows
+      directives:
+       description: Install NVM for Windows 
+       allowPrerelease: true
+       securityContext: elevated
+      settings:
+        id: CoreyButler.NVMforWindows
+        ### Install dot NET SDK
+    ### -------------------------------------
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Microsoft .NET SDK 6.0
+      version: 6.0.201
