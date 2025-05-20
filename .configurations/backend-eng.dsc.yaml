@@ -5,16 +5,6 @@ properties:
   ### RESOURCES: System Configuration
   ########################################
   resources:
-    # Clone the Git repository
-    # - resource: PSDscResources/Script
-    #   directives:
-    #     description: Configure Git to use Default WAM account
-    #   settings:
-    #     SetScript: |
-    #       git clone --quiet https://github.com/zargha/poc-devbox "C:\"
-          
-    #     GetScript: return $false
-    #     TestScript: return $false
     ########################################
     ### Install CLIs, SDKs & Tools
     ########################################
