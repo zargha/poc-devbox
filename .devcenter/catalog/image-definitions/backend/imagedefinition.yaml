@@ -12,7 +12,8 @@ tasks:
   - name: winget
     parameters:
       downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/backend-eng.dsc.yaml'
-# userTasks:
-#   - name: winget
-#     parameters:
-#       configurationFile: 'z:\workspaces\eshop\.configurations\backend-eng.postcreate.dsc.yaml'
+userTasks:
+  - name: winget
+    parameters:
+      downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/backend-eng.dsc.yaml'
+      # configurationFile: 'z:\workspaces\eshop\.configurations\backend-eng.postcreate.dsc.yaml'
