@@ -5,16 +5,8 @@ properties:
   ### RESOURCES: System Configuration
   ########################################
   resources:
-    ### Install Postman
+    ### Install Rancher Desktop
     ### -------------------------------------
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Insomnia
-      directives:
-        description: Install Insomnia
-        allowPrerelease: true
-      settings:
-       id: Insomnia.Insomnia
-    
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Rancher
       directives:

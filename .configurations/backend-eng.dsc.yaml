@@ -18,16 +18,6 @@ properties:
         securityContext: elevated
       settings:
        id: Docker.DockerDesktop
-    ### Install Rancher Desktop
-    ### -------------------------------------
-    # - resource: Microsoft.WinGet.DSC/WinGetPackage
-    #   id: Rancher
-    #   directives:
-    #    description: Install Rancher Desktop
-    #    allowPrerelease: true
-    #    securityContext: elevated
-    #   settings:
-    #     id: SUSE.RancherDesktop
     ### Install SQL Server Management Studio
     ### -------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
