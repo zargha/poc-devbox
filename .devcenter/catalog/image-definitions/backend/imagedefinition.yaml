@@ -4,11 +4,6 @@ image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m36
 description: "This definition is for the eShop backend engineering environment"
 
 tasks:
-  ### 
-  # - name: winget
-  #   parameters:
-  #     downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/common-config.dsc.yaml'
-  ### Run the DSC configuration for the backend engineering environment
   - name: winget
     parameters:
       downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/backend-eng.dsc.yaml'
@@ -16,4 +11,3 @@ userTasks:
   - name: winget
     parameters:
       downloadUrl: 'https://raw.githubusercontent.com/zargha/poc-devbox/refs/heads/master/.configurations/backend-eng.postcreate.dsc.yaml'
-      # configurationFile: 'z:\workspaces\eshop\.configurations\backend-eng.postcreate.dsc.yaml'
