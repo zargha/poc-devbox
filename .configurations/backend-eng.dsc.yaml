@@ -8,16 +8,16 @@ properties:
     ########################################
     ### Install CLIs, SDKs & Tools
     ########################################
-    ### Install Docker Desktop
-    ### -------------------------------------
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: docker
-      directives:
-        description: Install Docker Desktop
-        allowPrerelease: true
-        securityContext: elevated
-      settings:
-       id: Docker.DockerDesktop
+    # ### Install Docker Desktop
+    # ### -------------------------------------
+    # - resource: Microsoft.WinGet.DSC/WinGetPackage
+    #   id: docker
+    #   directives:
+    #     description: Install Docker Desktop
+    #     allowPrerelease: true
+    #     securityContext: elevated
+    #   settings:
+    #    id: Docker.DockerDesktop
     ### Install SQL Server Management Studio
     ### -------------------------------------
     - resource: Microsoft.WinGet.DSC/WinGetPackage
